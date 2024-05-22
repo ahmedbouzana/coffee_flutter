@@ -2,6 +2,7 @@ import 'package:coffeetute/components/coffee_tile.dart';
 import 'package:coffeetute/models/coffee.dart';
 import 'package:coffeetute/models/coffee_shop.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatefulWidget {
@@ -16,6 +17,9 @@ class _CartPageState extends State<CartPage> {
   void removeFromCart(Coffee coffee) {
     Provider.of<CoffeeShop>(context, listen: false).removeItemFromCart(coffee);
   }
+
+  //pay buttom tapped
+  void payNow() {}
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +51,22 @@ class _CartPageState extends State<CartPage> {
                   },
                 ),
               ),
+              GestureDetector(
+                onTap: payNow,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.brown,
+                      borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.all(25),
+                  width: double.infinity,
+                  child: const Center(
+                    child: Text(
+                      "Pay Now",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
