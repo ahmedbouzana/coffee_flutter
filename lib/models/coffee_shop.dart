@@ -4,15 +4,11 @@ import 'package:flutter/material.dart';
 class CoffeeShop extends ChangeNotifier {
   //coffee for sale list
   final List<Coffee> _shop = [
+    Coffee(name: 'Long Black', price: "4.10", imagePath: "images/black.png"),
+    Coffee(name: 'Late', price: "4.20", imagePath: "images/latte.png"),
+    Coffee(name: 'Espresso', price: "3.50", imagePath: "images/espresso.png"),
     Coffee(
-        name: 'Long Black', price: "4.10", imagePath: "lib/images/black.png"),
-    Coffee(name: 'Late', price: "4.20", imagePath: "lib/images/latte.png"),
-    Coffee(
-        name: 'Espresso', price: "3.50", imagePath: "lib/images/espresso.png"),
-    Coffee(
-        name: 'Iced Coffee',
-        price: "4.40",
-        imagePath: "lib/images/iced_coffee.png")
+        name: 'Iced Coffee', price: "4.40", imagePath: "images/iced_coffee.png")
   ];
 
   //user cart
